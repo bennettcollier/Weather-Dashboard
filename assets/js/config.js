@@ -1,0 +1,3 @@
+var config = {
+    OPEN_WEATHER_KEY: "50059088f758ae99de451af53e93c573"
+}

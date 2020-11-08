@@ -3,152 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <title>Weather</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    
-    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"  integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="assets/css/styles.css"/>
 </head>
-
 <body>
     <header>
-        <h1>Weather Dashboard</h1>
+        <nav class="navbar navbar-dark bg-dark text-light justify-content-center">
+            <h1>Weather Dashboard</h1>
+            
+         </nav>
     </header>
-
-    <main class="container">
-        <div class="row row-cols-1 row-cols-lg-2">
-            <!-- Search cities -->
-            <section class="col col-lg-3 searchedCitiesSection">
-                <div class="card">
-                    <div calss="card-header subtitle">
-                        <h5>Search for a City</h5>
-                    </div>
-                    <div class="card-body">
-                        <!-- Search form -->
-                        <form class="form-inline">
-                            <div class="form-group mb-2">
-                                <input type="search" class="form-control" id="cityInput" />
-                            </div>
-                            <button type="submit" class="btn mb-2" id="searchBtn">
-                                <img src="./assets/images/hiclipart.com.png" alt="Magnifying Glass" width="20" height="20">
+   
+    <div class = "container-fluid">
+        <div class = "row">
+            <div id = "menu" class = "col-md-4 col-lg-3 d-md-block bg-light">
+                <div id="search-part"> 
+                    <h5>Search for a City:</h5>
+                    <div class="row">        
+                        <div class="input-group col-12"> 
+                            <input class="form-control py-2" type="search"  placeholder= "City Name" id="search-input">
+                        
+                            <button id = "search-btn" class="btn btn-outline-primary" type="button">
+                                <i class="fa fa-search"></i>
                             </button>
-                        </form>
-
-                        <!-- Cities list -->
-                        <div class="list-group listSearchedCities"></div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Current weather -->
-            <section class="col col-lg-9">
-                <div class="card">
-                    <div class="card-body currentWeather">
-                        <div class="card mb-3 currentData">
-                            <div class="city-card-header city">City</div>
-                            <div class="city-card-header date">Date</div>
-                            <div class="card-body"></div>
-                            <div class="row row-cols-1 row-cols-sm-2 justify-content-start">
-                                <div class="col col-sm-3">
-                                    <img src="#" class="card-img-top icon" alt="Weather Icon" style="display: none;" />
-                                    <p class="card-text weather">Weather</p>
-                                    <p class="card-text temp">Temperature</p>
-                                    <p class="cart-text humid">Humidity</p>
-                                    <p class="card-text wind">Wind Speed</p>
-                                    <p class="card-text">
-                                        <span class="uv">UV Index</span>
-                                        <span class="flag"></span>
-                                    </p>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
-            </section>
-        </div>
+                
 
-        <!-- Forecast -->
-        <section class="row forecast">
-            <div class="col col1">
-                <div class="card">
-                    <div class="card-header forecast-subtitle">
-                        <h5>5-Day Forecast</h5>
-                    </div>
-                    <div class="card-body">
-                        <div class="row row-cols-5">
-                            <div class="col">
-                                <div class="card mb-3" style="max-width: 18rem;">
-                                    <div class="five-card-header date">Day 1</div>
-                                    <div class="five-card-body">
-                                        <img src="#" class="card-img-top icon" alt="Weather Icon" style="display: none;" />
-                                        <p class="card-text weather">Weather</p>
-                                        <p class="card-text temp">Temperature</p>
-                                        <p class="cart-text humid">Humidity</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="card mb-3" style="max-width: 18rem;">
-                                    <div class="five-card-header date">Day 2</div>
-                                    <div class="five-card-body">
-                                        <img src="#" class="card-img-top icon" alt="Weather Icon" style="display: none;" />
-                                        <p class="card-text weather">Weather</p>
-                                        <p class="card-text temp">Temperature</p>
-                                        <p class="cart-text humid">Humidity</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="card mb-3" style="max-width: 18rem;">
-                                    <div class="five-card-header date">Day 3</div>
-                                    <div class="five-card-body">
-                                        <img src="#" class="card-img-top icon" alt="Weather Icon" style="display: none;" />
-                                        <p class="card-text weather">Weather</p>
-                                        <p class="card-text temp">Temperature</p>
-                                        <p class="cart-text humid">Humidity</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="card mb-3" style="max-width: 18rem;">
-                                    <div class="five-card-header date">Day 4</div>
-                                    <div class="five-card-body">
-                                        <img src="#" class="card-img-top icon" alt="Weather Icon" style="display: none;" />
-                                        <p class="card-text weather">Weather</p>
-                                        <p class="card-text temp">Temperature</p>
-                                        <p class="cart-text humid">Humidity</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="card mb-3" style="max-width: 18rem;">
-                                    <div class="five-card-header date">Day 5</div>
-                                    <div class="five-card-body">
-                                        <img src="#" class="card-img-top icon" alt="Weather Icon" style="display: none;" />
-                                        <p class="card-text weather">Weather</p>
-                                        <p class="card-text temp">Temperature</p>
-                                        <p class="cart-text humid">Humidity</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
+                <div id = "search-history-placeholder">
+                    <h5>Search history</h5>
+                    <ul id =  "cityHistory" class = "list-group">
+                        <li class = "list-group-item">City</li>
+                        <li class = "list-group-item">City</li>
+                        <li class = "list-group-item">City</li>
+                        <li class = "list-group-item">City</li>
+                        <li class = "list-group-item">City</li>
+                        <li class = "list-group-item">City</li>
+                    </ul>        
                 </div>
             </div>
-        </section>
-    </main>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
-    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
-    <script src="https://api.windy.com/assets/map-forecast/libBoot.js"></script>
-    <script src="assets/js/script.js"></script>
-    
+
+            <div id = "data-display" class = "col-lg">
+                <div id ="today" class=row></div>
+                
+                
+                <div id = "five-days" class = row>
+                        
+                </div>  
+
+
+                <div id= "forecastcards" class ="row">
+                   
+                </div>
+            </div> 
+                
+             
+
+                   
+
+                
+
+        </div>
+
+    </div>      
+
+
+
+
+      
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script src= "./assets/js/config.js"></script>
+    <script src= "./assets/js/script.js"></script>
 </body>
 </html>
