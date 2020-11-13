@@ -14,3 +14,5 @@ This challenge required a weather outlook for mulitple cities so that travelers 
 - CSS
 - Bootstrap
 - OpenWeatherMap API's
+
+<img width="1255" alt="Screen Shot 2020-11-12 at 6 52 47 PM" src="https://user-images.githubusercontent.com/71052027/99023290-16b06080-2519-11eb-9b5f-b536ac0f9fc1.png">
