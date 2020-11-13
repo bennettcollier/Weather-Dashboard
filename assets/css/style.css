@@ -1,12 +1,14 @@
+* {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 .navbar {
-  min-height: 100px;
-  
+  min-height: 100px;  
 }
 
 .uv-low{
   background-color: green;
 }
-
 
 .uv-moderate{
   background-color: yellow;
@@ -24,13 +26,6 @@
   background-color: purple;
 }
 
-#arrow{
-  display: inline-block;
-  transform: rotate(var(--angle));
-  font-size: larger;
-  
-}
-
 .hr-meteogram{
   font-size: x-small;
   display:flex;
@@ -38,7 +33,6 @@
   width: 100%;
   margin: 20px 0 0 0;
   border-top: 0.5px solid grey; 
-
 }
 
 .hr-meteogram img{
@@ -50,14 +44,12 @@
   flex-wrap: wrap;
   justify-content: space-around;
   max-width: 90%;
-     
 }
 
 #five-days{
-  padding:10px 0 0 20px
+  padding: 10px 0 0 20px;
 }
 
 #today .card{
   width: 90%;
-
 }
